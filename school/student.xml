@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.actions.act_window" id="school_student_list_action">
+			<field name="name">Student</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">school.student</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form,graph</field>
+		</record>
+        <menuitem id="school_student_list_menu" action="school_student_list_action" parent="school_management" sequence="1" />
+        
+        <record id="view_student" model="ir.ui.view">
+            <field name="name">student.form</field>
+            <field name="model">school.student</field>
+            <field name="arch" type="xml">
+                <form string="Student">
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>
